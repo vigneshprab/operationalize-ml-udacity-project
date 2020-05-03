@@ -1,0 +1,18 @@
+<paste log output from Kubernetes-mediated prediction, here>
+~/udacity_projects/ml_microservices
+> ./run_kubernetes.sh                                                                                                           8% (0:15) 
+kubectl run --generator=deployment/apps.v1 is DEPRECATED and will be removed in a future version. Use kubectl run --generator=run-pod/v1 or kubectl create instead.
+deployment.apps/app-flask created
+NAME                         READY   STATUS              RESTARTS   AGE
+app-flask-7454fc94d6-ndckc   0/1     ContainerCreating   0          0s
+error: unable to forward port because pod is not running. Current status=Pending
+
+~/udacity_projects/ml_microservices
+> ./run_kubernetes.sh                                                                                                        60% (1:59) 
+kubectl run --generator=deployment/apps.v1 is DEPRECATED and will be removed in a future version. Use kubectl run --generator=run-p
+od/v1 or kubectl create instead.
+Error from server (AlreadyExists): deployments.apps "app-flask" already exists
+NAME                         READY   STATUS    RESTARTS   AGE
+app-flask-7454fc94d6-ndckc   1/1     Running   0          39s
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80

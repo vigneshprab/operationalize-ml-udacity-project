@@ -14,5 +14,15 @@ od/v1 or kubectl create instead.
 Error from server (AlreadyExists): deployments.apps "app-flask" already exists
 NAME                         READY   STATUS    RESTARTS   AGE
 app-flask-7454fc94d6-ndckc   1/1     Running   0          39s
-Forwarding from 127.0.0.1:8000 -> 80
-Forwarding from [::1]:8000 -> 80
+Forwarding from 0.0.0.0:8000 -> 80
+Handling connection for 8000
+^C{'CHAS': {'0': 0.2}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2020-05-04 12:05:22,059] INFO in app: Inference payload DataFrame:
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0   0.2  6.575  296.0     15.3  396.9   4.98
+[2020-05-04 12:05:22,074] INFO in app: Scaling Payload:
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0   0.2  6.575  296.0     15.3  396.9   4.98
+[2020-05-04 12:05:22,078] INFO in app: Output prediction:
+{'prediction': [20.35373177134412]}
+127.0.0.1 - - [04/May/2020 12:05:22] "POST /predict HTTP/1.1" 200 -
